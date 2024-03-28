@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cards{
+    width: 100%;
+    max-width: 800px;
+    height: 300px;
+    display: flex;
+    justify-content: space-around;
+}
+.container>.cards>label{
+    width: 250px;
+    height: 200px;
+    border: 2px solid rgb(173, 172, 172);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+}
+.container>.cards>label input{
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: gray;
+}
+.container>.cards>label input:checked{
+    background-image: url("../images/check-lg.svg");
+    background-color: dodgerblue;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.container>.cards>label:has(:checked){
+    border: 3px solid dodgerblue;
+}
+.checkbox-wrapper{
+    display: flex;
+    justify-content: flex-end;
+    /* background-color: crimson; */
+    width: 100%;
+}
